@@ -1,4 +1,4 @@
-from flask import Flask, render_template, session, redirect, url_for
+from flask import Flask, render_template, session, redirect, url_for, flash
 from flask_bootstrap import Bootstrap
 from flask_moment import Moment
 from datetime import datetime
@@ -14,6 +14,14 @@ moment = Moment(app)
 def index():
     form = submitForm()
     if form.validate_on_submit():
+        old_name = session.get('name')
+        old_email = session.get('email')
+
+        if old_name is not None and form.name.data != old_name: 
+            flash("Looks like you changed your name!")
+        if old_email is not None and old_email != form.email.data:
+            flash("Looks like you changed your email!")
+            
         session['name'] = form.name.data
         session['email'] = form.email.data
         return redirect(url_for('index'))    
