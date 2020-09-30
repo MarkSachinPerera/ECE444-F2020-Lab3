@@ -6,7 +6,11 @@
 {% if name %}
 <div class="page-header">
     <h1>Hello, {{ name }}!</h1>
-    <h1>Your UofT email is {{ email }}.</h1>
+    {% if email %}
+        <h1>Your UofT email is {{ email }}.</h1>
+    {% else %}
+        <h1>Please use your UofT email.</h1>
+    {% endif %}
 </div>
 {% else %}
 <div class="page-header"><h1>Hello, Stranger!</h1></div>
