@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, session, redirect, url_for
 from flask_bootstrap import Bootstrap
 from flask_moment import Moment
 from datetime import datetime
@@ -14,8 +14,11 @@ moment = Moment(app)
 def index():
     form = submitForm()
     if form.validate_on_submit():
-        return render_template('index.html', current_time=datetime.utcnow(), form=form, name=form.name.data, email=form.email.data)
-    return render_template('index.html', current_time=datetime.utcnow(), form=form)
+        session['name'] = form.name.data
+        session['email'] = form.email.data
+        return redirect(url_for('index'))    
+    return render_template('index.html', current_time=datetime.utcnow(), form=form, name=session.get('name'), email=session.get('email'))
+    
 
 @app.route('/user/<name>')
 def user(name):
