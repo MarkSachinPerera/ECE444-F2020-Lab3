@@ -13,6 +13,8 @@ moment = Moment(app)
 @app.route('/index', methods=['POST', 'GET'])
 def index():
     form = submitForm()
+    if form.validate_on_submit():
+        return render_template('index.html', current_time=datetime.utcnow(), form=form, name=form.name.data)
     return render_template('index.html', current_time=datetime.utcnow(), form=form)
 
 @app.route('/user/<name>')
