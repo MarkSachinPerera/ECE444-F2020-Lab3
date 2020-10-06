@@ -4,18 +4,17 @@
 
 ## Activity 1
 
-![Activity1](activity1.jpg)
+
 
 ## Activity 2
 
-![helloStranger](hellostranger.jpg)
-![nameEmail](nameandemail.jpg)
-![emailerror](emailerror.jpg)
-![final](useUofTemailerror.jpg)
+
 
 ## Activity 3
 
-> Summarize the difference between SQL and Non-SQL.
-> > SQL is a structured querry language. It creates relational databases. They have a predefined schema. They are tables & records based.
-> > Non-SQL creates non-relational databases. They have collections and documents instead of tables and records.
-> 
+> Briefly summarize the differences between Docker and Virtual Machine.
+> > A Docker uses a container while a vitrual machine uses a hypervisor. Both are a tool to used to run multiples operating systems on a single machine. The are many trade offs to
+> > picking a hypervisor over a container. Some important points are increased security through better isolation of hosts, more functionality on the guest OS (by using hardware more efficently), and applications like virtual box allows users to save versions of the machine (built in recovery tools).  
+> >
+> > On the other hand picking a container make life a lot easier if the task is small enough. Container are very lightweight and super easy to setup. From what I have seen in practice, most of the time its run over a terminal. Unlike VMs, you can go to docker.io and grab an image and deploy it without alot of trouble. This also makes them very portable. If I pick an image from docker.io and set it up on my work computer, it takes seconds to come home and do the same thing. Containers also come in handy to setup microservices like we are doing for this lab.
+> >
