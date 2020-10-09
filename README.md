@@ -4,11 +4,26 @@
 
 ## Activity 1
 
-
+> Repo branch created.
 
 ## Activity 2
 
+### Command to run docker
+    `$ docker-compose up`
 
+### Files created for docker
+
+   [Yaml file](./docker-compose.yml)
+
+   [The docker file](./Dockerfile)
+
+   [The requirements file](./requirements.txt)
+
+### Images showing docker run command, browser, and docker image
+
+![dockerRunning](./docker-dockercontainer-running.jpg)
+![dockerterminal](./terminal-docker-running.jpg)
+![webimage](./website-running.jpg)
 
 ## Activity 3
 
