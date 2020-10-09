@@ -1,1 +1,5 @@
 Flask==1.1.2
+flask_bootstrap==3.3.7.1
+Flask_Moment==0.10.0
+flask_wtf==0.14.3
+email_validator==1.1.1
